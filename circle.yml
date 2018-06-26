@@ -1,0 +1,11 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  override:
+   - docker build -t mzpl
+
+test:
+  override:
+    - docker run mzpl npm test
